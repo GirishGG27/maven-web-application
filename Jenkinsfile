@@ -16,7 +16,7 @@ git branch: 'development', url: 'https://github.com/GirishGG27/maven-web-applica
 stage('Build'){
 sh "${mavenHome}/bin/mvn clean package"
 }
-
+/*
 stage('ExecuteSonarQubeReport'){
 sh "${mavenHome}/bin/mvn clean sonar:sonar"
 }
@@ -30,5 +30,5 @@ sshagent(['c0db8500-b6d0-44a0-a317-46949666fdee']) {
     sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.40.250:/opt/apache-tomcat-9.0.75/webapps/"
 }
 }
-
+*/
 }
